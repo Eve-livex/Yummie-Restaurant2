@@ -90,8 +90,8 @@ h1:hover{
     margin-left: 20px;
   }
   .box5{
-    width: 200px;
-    height: 60px;
+    width: 60px;
+    height: 30px;
     border: double;
     text-align: center;
     background-image: url(img3.jpeg);
@@ -103,8 +103,8 @@ h1:hover{
    
   }
 .box6{
-    width: 200px;
-    height: 60px;
+  width: 60px;
+  height: 30px;
     border: double;
     text-align: center;
     background-image: url(img3.jpeg);
@@ -114,8 +114,8 @@ h1:hover{
     color: black;
   } 
   .box7{
-    width: 200px;
-    height: 60px;
+    width: 60px;
+    height: 30px;
     border: double;
     text-align: center;
     background-image: url(img3.jpeg);
@@ -125,8 +125,8 @@ h1:hover{
     color: black;
   }
   .box8{
-    width: 200px;
-    height: 60px;
+    width: 60px;
+    height: 30px;
     border: double;
     text-align: center;
     background-image: url(img3.jpeg);
@@ -144,8 +144,8 @@ h1:hover{
     
   }
   .email{
-    width: 200px;
-    height: 60px;
+    width: 60px;
+    height: 30px;
     border: double;
     text-align: center;
     background-image: url(img3.jpeg);
@@ -182,10 +182,42 @@ h1:hover{
   
   #img3 {
     width: 100%; /* Makes the image fit the full width */
-    height: 200px; /* Fixed height */
+    height: 150px; /* Fixed height */
     object-fit: cover; /* Ensures the image maintains aspect ratio */
     position: absolute; /* Normal positioning */
     bottom: 0;
-    
+    border: 2px double;
+    color: white;
+}
+
+
+
+#container2 {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#container2 div {
+  background: #f5f5f5;
+  padding: 10px;
+  
+  transition: 0.3s ease;
+}
+
+#container2 div:hover {
+  background: #ddd;
+}
+
+#container2 a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+}
+
+#container2 a:hover {
+  color: #e74c3c;
 }
 
