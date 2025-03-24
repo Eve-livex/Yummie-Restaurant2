@@ -9,6 +9,18 @@ body{
 
     
 }
+/* For screens smaller than 768px (Mobile) */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stacks elements vertically */
+      width: 100%;
+  }
+
+  img {
+      width: 100%;
+      height: auto;
+  }
+}
 
 h1{
     text-align: center;
