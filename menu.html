@@ -4,63 +4,257 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yummie! Restaurant Menu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
+    <!-- Navigation with Hamburger Menu -->
+    <header>
         <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            
-            </ul>
+            <div class="nav-container">
+                <a href="index.html" class="logo">Yummie!</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="menu.html" class="nav-link">MENU</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li><a href="#" class="nav-link btn-reservation">RESERVATIONS</a></li>
+                </ul>
+            </div>
         </nav>
-
-    </div>
-    <h1 id="h11">Yummie! Restaurant Menu</h1>
-    <div id="container">
-        <div id="box1">
-            <h2>Breakfast</h2>
-            <ul>
-                <li><b>Yummie! Special Pancakes</b><br> – Fluffy pancakes served with honey, syrup, or fresh fruits</li>
-                <li><b>Full English Breakfast</b><br> – Eggs, sausages, bacon, baked beans, toast, and grilled tomatoes</li>
-                <li><b>Avocado Toast Delight</b><br> – Creamy avocado on toasted sourdough with a poached egg</li>
-                <li><b>Tropical Smoothie Bowl</b><br> – A blend of fresh fruits, yogurt, and granola</li>
-            </ul>
-        </div>
-        <div id="box2">
-            <h2>Lunch </h2>
-            <ul>
-                <li><b>Grilled Chicken & Rice</b><br> – Juicy grilled chicken served with aromatic herb rice</li>
-                <li><b>Beef Burger Deluxe</b><br> – A thick, juicy beef patty with cheese, lettuce, and special sauce</li>
-                <li><b>Classic Caesar Salad</b><br> – Crispy lettuce, grilled chicken, parmesan, and Caesar dressing</li>
-                <li><b>Creamy Pesto Pasta</b><br> – Penne pasta tossed in a rich basil pesto sauce</li>
-            </ul>
-        </div>
-        <div id="box3">
-            <h2>Dinner </h2>
-            <br>
-            <ul>
-                <li><b>Yummie! Signature Steak</b><br> – Grilled steak cooked to perfection with mashed potatoes</li>
-                <li><b>Garlic Butter Shrimp</b><br> – Succulent shrimp sautéed in garlic butter, served with rice</li>
-                <li><b>Stuffed Bell Peppers</b><br> – Roasted peppers filled with spiced beef and melted cheese</li>
-                <li><b>Mushroom Risotto</b><br> – Creamy Italian-style risotto with sautéed mushrooms</li>
-            </ul>
-        </div>
-        <div id="box4">
-            <h2>Late-Night Bites </h2>
-            <br>
-            <ul>
-                <li><b>Loaded Nachos</b><br> – Crispy tortilla chips topped with cheese, jalapeños, and guacamole</li>
-                <li><b>Chicken Wings Platter</b><br> – Spicy, BBQ, or honey-glazed wings served with dipping sauce</li>
-                <li><b>Mini Sliders Trio</b><br> – Three mini burgers with different flavors (beef, chicken, and veggie)</li>
-                <li><b>Chocolate Lava Cake</b><br> – Warm, gooey chocolate cake with vanilla ice cream</li>
-            </ul>
-        </div>
-
-    </div>
+    </header>
     
 
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-container">
+            <div class="menu-category">
+                <div class="category-header">
+                    <h3>Breakfast</h3>
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-header">
+                            <h4>Yummie! Special Pancakes</h4>
+                            <span class="price">$12.99</span>
+                        </div>
+                        <p class="item-description">Fluffy pancakes served with honey, syrup, or fresh fruits</p>
+                    </li>
+                    <!-- More breakfast items -->
+                </ul>
+            </div>
+            <div class="menu-category">
+                <div class="category-header">
+                    <h3>Lunch</h3>
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-header">
+                            <h4>Yummie! Special Grilled Chicken</h4>
+                            <span class="price">$40.99</span>
+                        </div>
+                        <p class="item-description">Yummie! Grilled Chicken Served with French Fries</p>
+                    </li>
+                    <!-- More lunch items -->
+                </ul>
+            </div>
+            <div class="menu-category">
+                <div class="category-header">
+                    <h3>Dinner</h3>
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-header">
+                            <h4>Yummie! Special Signature Steak</h4>
+                            <span class="price">$50.99</span>
+                        </div>
+                        <p class="item-description">Signature Steak served with Mashed Potatoes, syrup, or fresh fruits</p>
+                    </li>
+                    <!-- More dinner items -->
+                </ul>
+            </div>
+            <div class="menu-category">
+                <div class="category-header">
+                    <h3>Late-night Bites</h3>
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-header">
+                            <h4>Yummie! Special Chicken Wings Platter</h4>
+                            <span class="price">$12.99</span>
+                        </div>
+                        <p class="item-description">Spicy, BBQ, or honey-glazed wings served with dipping sauce</p>
+                    </li>
+                    <!-- More breakfast items -->
+                </ul>
+            </div>
+            <!-- More menu categories -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Yummie!</h3>
+                <p>Founded in 2010, we're dedicated to serving delicious meals made from locally-sourced ingredients.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Foodie Street, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@yummie.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Yummie! Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Animate hamburger to X
+        const bars = document.querySelectorAll('.bar');
+        if (navMenu.classList.contains('active')) {
+            bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            bars[1].style.opacity = '0';
+            bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        } else {
+            bars.forEach(bar => {
+                bar.style.transform = '';
+                bar.style.opacity = '';
+            });
+        }
+    });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.querySelectorAll('.bar').forEach(bar => {
+                    bar.style.transform = '';
+                    bar.style.opacity = '';
+                });
+            }
+        });
+    });
+    
+    // Back to Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('active');
+        } else {
+            backToTopButton.classList.remove('active');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Scroll Reveal Animation
+    const scrollReveal = ScrollReveal({
+        origin: 'bottom',
+        distance: '30px',
+        duration: 1000,
+        reset: true
+    });
+    
+    scrollReveal.reveal('.menu-category', { interval: 200 });
+    scrollReveal.reveal('.footer-container > div', { interval: 200 });
+    
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Lazy Loading Images
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Fallback for browsers that don't support lazy loading
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+        document.body.appendChild(script);
+    }
+    
+    // Form Validation (example for contact page)
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+            const inputs = this.querySelectorAll('input, textarea');
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('error');
+                    isValid = false;
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                e.preventDefault();
+                alert('Please fill in all required fields');
+            }
+        });
+    });
+});
+    </script>
 </body>
 </html>

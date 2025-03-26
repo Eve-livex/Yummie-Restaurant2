@@ -3,47 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yummie! Restaurant Contact</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Yummie! Restaurant Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
+    <!-- Navigation with Hamburger Menu -->
+    <header>
         <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            
-            </ul>
+            <div class="nav-container">
+                <a href="index.html" class="logo">Yummie!</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="menu.html" class="nav-link">MENU</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li><a href="#" class="nav-link btn-reservation">RESERVATIONS</a></li>
+                </ul>
+            </div>
         </nav>
-        <h1 style="font-size: 40px;"> Contact Us</h1>
-        <hr>
-        <br>
-        <br>
-        <h3>Let’s Connect!
-            Got a craving or a question? We’d love to hear from you! Whether you're looking to make a reservation,<br> place an order, or simply say hello, our team is here to make your Yummie! experience unforgettable.
-<br>
-             Visit us for mouthwatering meals.<br>
-             Drop us an email for inquiries.<br>
-             Give us a call and let’s talk good food!
-            <br>
-            Your next delicious experience starts here—reach out today!
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Yummie! Restaurant</h1>
             
-            </h3>
-    </div>
-    <div id="container2">
-        <div class="box5"><a href="#"><i class="fab fa-instagram"></i></a></div>
-        <div class="box6"><a href="#"><i class="fab fa-facebook"></i></a></div>
-        <div class="box7"><a href="#"><i class="fab fa-linkedin"></i></a></div>
-        <div class="box8"><a href="#"><i class="fab fa-telegram"></i></a></div>
-        <div class="email">
-            <a href="mailto:evelynatieno218@gmail.com"><i class="fas fa-envelope"></i></a>
+           <p>Call us now and let's turn your culinary dreams into reality. Your table is waiting.
+        </p>
         </div>
-    </div>
-    
-
-    
+        <div class="hero-overlay"></div>
         
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Yummie!</h3>
+                <p>Founded in 2010, we're dedicated to serving delicious meals made from locally-sourced ingredients.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Foodie Street, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@yummie.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Yummie! Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Animate hamburger to X
+        const bars = document.querySelectorAll('.bar');
+        if (navMenu.classList.contains('active')) {
+            bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            bars[1].style.opacity = '0';
+            bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        } else {
+            bars.forEach(bar => {
+                bar.style.transform = '';
+                bar.style.opacity = '';
+            });
+        }
+    });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.querySelectorAll('.bar').forEach(bar => {
+                    bar.style.transform = '';
+                    bar.style.opacity = '';
+                });
+            }
+        });
+    });
+    
+    // Back to Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('active');
+        } else {
+            backToTopButton.classList.remove('active');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Scroll Reveal Animation
+    const scrollReveal = ScrollReveal({
+        origin: 'bottom',
+        distance: '30px',
+        duration: 1000,
+        reset: true
+    });
+    
+    scrollReveal.reveal('.menu-category', { interval: 200 });
+    scrollReveal.reveal('.footer-container > div', { interval: 200 });
+    
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Lazy Loading Images
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Fallback for browsers that don't support lazy loading
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+        document.body.appendChild(script);
+    }
+    
+    // Form Validation (example for contact page)
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+            const inputs = this.querySelectorAll('input, textarea');
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('error');
+                    isValid = false;
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                e.preventDefault();
+                alert('Please fill in all required fields');
+            }
+        });
+    });
+});
+    </script>
 </body>
 </html>
